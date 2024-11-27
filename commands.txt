@@ -1,0 +1,8 @@
+javac -d . Server.java Client.java RemoteFileService.java
+
+
+jar cfm pa1.jar META-INF/MANIFEST.MF Server.class Client.class RemoteFileService.class
+
+
+jar tf pa1.jar
+
