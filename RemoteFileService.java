@@ -9,4 +9,11 @@ public interface RemoteFileService extends Remote {
     String removeDirectory(String directoryPath) throws RemoteException;
     String removeFile(String filePath) throws RemoteException;
     String shutdownServer() throws RemoteException;
+    long getUploadedSize(String serverFilePath) throws RemoteException;
+    String uploadChunk(String serverFilePath, byte[] data, int bytesRead) throws RemoteException;
+    String setFileSize(String serverFilePath, long fileSize) throws RemoteException;
+    long getFileSize(String serverFilePath) throws RemoteException;
+    byte[] downloadChunk(String serverFilePath, long offset) throws RemoteException;
+
+
 }
